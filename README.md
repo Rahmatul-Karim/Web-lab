@@ -32,17 +32,7 @@ The application gets Pokémon data from the PokéAPI and displays the informatio
 - JavaScript
 - PokéAPI
 
-## API Used
 
-This project uses the public PokéAPI.
-
-API endpoint:
-
-https://pokeapi.co/api/v2/pokemon/{name}
-
-For example:
-
-https://pokeapi.co/api/v2/pokemon/pikachu
 
 ## Project Structure
 
