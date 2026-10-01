@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Card Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+
+        <header class="top">
+            <p>POKEMON</p>
+            <h1>Pokémon Card Explorer</h1>
+            <span>Search and explore Pokémon information.</span>
+        </header>
+
+
+        <!-- Search -->
+        <section class="search-box">
+
+            <p>LIVE SEARCH</p>
+            <h2>Find a Pokémon</h2>
+
+            <form id="search-form">
+
+                <input
+                    type="text"
+                    id="pokemon-input"
+                    placeholder="Enter Pokémon name"
+                >
+
+                <button type="submit">Search →</button>
+
+            </form>
+
+
+            <div class="quick">
+                <span>Quick Search:</span>
+
+                <button type="button"
+                    class="quick-search"
+                    data-pokemon="pikachu">
+                    Pikachu
+                </button>
+
+                <button type="button"
+                    class="quick-search"
+                    data-pokemon="charizard">
+                    Charizard
+                </button>
+
+                <button type="button"
+                    class="quick-search"
+                    data-pokemon="bulbasaur">
+                    Bulbasaur
+                </button>
+
+                <button type="button"
+                    class="quick-search"
+                    data-pokemon="mewtwo">
+                    Mewtwo
+                </button>
+            </div>
+
+        </section>
+
+
+        <p id="status-message"></p>
+
+
+        <!-- Loading -->
+        <section id="loading-message" class="message" hidden>
+            Loading Pokémon...
+        </section>
+
+
+        <!-- Error -->
+        <section id="error-message" class="error" hidden>
+            Pokémon not found. Please check the name and try again.
+        </section>
+
+
+        <!-- Pokémon Card -->
+        <article id="pokemon-card">
+
+            <div class="card-top">
+                <span id="card-type">ELECTRIC TYPE · POKÉDEX ENTRY</span>
+                <span id="pokemon-id">#025</span>
+            </div>
+
+
+            <div class="hero">
+
+                <div>
+                    <small>POKÉMON SPECIES</small>
+
+                    <h2 id="pokemon-name">Pikachu</h2>
+
+                    <div id="pokemon-types"></div>
+                </div>
+
+
+                <img id="pokemon-image" src="" alt="Pokémon artwork">
+
+            </div>
+
+
+            <!-- Details -->
+            <div class="details">
+
+                <div>
+                    <small>HEIGHT</small>
+                    <strong id="pokemon-height">-</strong>
+                </div>
+
+                <div>
+                    <small>WEIGHT</small>
+                    <strong id="pokemon-weight">-</strong>
+                </div>
+
+                <div>
+                    <small>ABILITIES</small>
+                    <span id="pokemon-abilities"></span>
+                </div>
+
+            </div>
+
+
+            <!-- Stats -->
+            <section class="stats">
+
+                <p>BATTLE PROFILE</p>
+                <h3>Base Stats</h3>
+
+                <div class="stat">
+                    <span>HP</span>
+                    <div><i id="bar-hp"></i></div>
+                    <b id="stat-hp">-</b>
+                </div>
+
+                <div class="stat">
+                    <span>Attack</span>
+                    <div><i id="bar-attack"></i></div>
+                    <b id="stat-attack">-</b>
+                </div>
+
+                <div class="stat">
+                    <span>Defense</span>
+                    <div><i id="bar-defense"></i></div>
+                    <b id="stat-defense">-</b>
+                </div>
+
+                <div class="stat">
+                    <span>Sp. Attack</span>
+                    <div><i id="bar-special-attack"></i></div>
+                    <b id="stat-special-attack">-</b>
+                </div>
+
+                <div class="stat">
+                    <span>Sp. Defense</span>
+                    <div><i id="bar-special-defense"></i></div>
+                    <b id="stat-special-defense">-</b>
+                </div>
+
+                <div class="stat">
+                    <span>Speed</span>
+                    <div><i id="bar-speed"></i></div>
+                    <b id="stat-speed">-</b>
+                </div>
+
+            </section>
+
+        </article>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
